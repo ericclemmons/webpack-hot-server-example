@@ -1,7 +1,5 @@
 import express from "express";
 
-console.log(module.id, __filename);
-
 export default express.Router()
   .get("/", (req, res) => {
     res.send(`
@@ -36,7 +34,8 @@ export default express.Router()
                   setTimeout(update, 1000);
                 })
                 .catch(function(err) {
-                  render(err.message);
+                  render("❌  " + err.message + " at <strong>" + new Date() + "</storng>");
+                  setTimeout(update, 1000);
                 })
               ;
             }

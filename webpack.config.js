@@ -47,5 +47,5 @@ module.exports = {
     new StartServerPlugin(),
   ],
 
-  target: "node",
+  target: "async-node",
 };
