@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Webpack Hot Module Replacement (HMR) Example",
   "main": "index.js",
+  "engines": {
+    "node": ">=4.2.0"
+  },
   "dependencies": {
     "babel-core": "6.8.0",
     "babel-loader": "6.2.4",
