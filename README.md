@@ -5,18 +5,6 @@
 >
 > ![Latest Demo](hmr.gif)
 
-This project originated from an internal work project that **worked flawlessly**.
-Unfortunately, it's been impossible to replicate up to this point.
-
-
-### Help Wanted
-
-> See: <https://github.com/webpack/webpack/issues/2485>
-
-- [ ] Webpack requires restarting several times before changes are picked up.
-- [ ] HMR only works _once_, not with subsequent saves.
-
-
 [express]: http://expressjs.com/
 [hmr]: https://webpack.github.io/docs/hot-module-replacement.html
 [webpack]: http://webpack.github.io/
