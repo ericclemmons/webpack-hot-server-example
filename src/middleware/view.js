@@ -34,7 +34,7 @@ export default express.Router()
                   setTimeout(update, 1000);
                 })
                 .catch(function(err) {
-                  render("❌  " + err.message + " at <strong>" + new Date() + "</storng>");
+                  render("❌  " + err.message + " at <strong>" + new Date() + "</strong>");
                   setTimeout(update, 1000);
                 })
               ;
