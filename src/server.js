@@ -1,8 +1,5 @@
 import express from "express";
-
-function getApp() {
-  return require("./app").default;
-}
+import app from "./app";
 
 if (module.hot) {
   module.hot.accept("./app", function() {
@@ -15,7 +12,7 @@ if (module.hot) {
 }
 
 export default express()
-  .use((req, res) => getApp().handle(req, res))
+  .use((req, res) => app.handle(req, res))
   .listen(3000, function(err) {
     if (err) {
       console.error(err);
