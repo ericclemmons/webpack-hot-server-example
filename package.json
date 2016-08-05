@@ -8,7 +8,7 @@
     "node": ">=4.2.0"
   },
   "dependencies": {
-    "babel-core": "^6.10.4",
+    "babel-core": "^6.13.0",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015-webpack": "^6.4.1",
     "express": "^4.14.0",
