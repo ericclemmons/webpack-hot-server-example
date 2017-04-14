@@ -14,7 +14,7 @@
     "express": "^4.14.0",
     "rimraf": "^2.5.4",
     "start-server-webpack-plugin": "^2.0.1",
-    "webpack": "^2.1.0-beta"
+    "webpack": "^2.4.0"
   },
   "devDependencies": {
     "npm-install-webpack-plugin": "^4.0.4"
