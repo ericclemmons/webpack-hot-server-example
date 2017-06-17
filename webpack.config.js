@@ -1,6 +1,7 @@
 var NpmInstallPlugin = require("npm-install-webpack-plugin");
-var StartServerPlugin = require("start-server-webpack-plugin").default;
+var StartServerPlugin = require("start-server-webpack-plugin");
 var webpack = require("webpack");
+var path = require("path");
 
 module.exports = {
   devtool: "inline-sourcemap",
@@ -20,7 +21,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        loader: "babel",
+        loader: "babel-loader",
         query: { cacheDirectory: true },
         test: /\.js$/,
       },
@@ -37,14 +38,14 @@ module.exports = {
     devtoolModuleFilenameTemplate: "[absolute-resource-path]",
     filename: "[name].js",
     libraryTarget: "commonjs2",
-    path: "./build/server",
+    path: path.resolve(__dirname, "./build/server"),
   },
 
   plugins: [
     new StartServerPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 
   target: "async-node",

@@ -1,8 +1,9 @@
 import express from "express";
-import app from "./app";
+let app = require("./app").default;
 
 if (module.hot) {
   module.hot.accept("./app", function() {
+    app = require("./app").default;
     console.log("🔁  HMR Reloading `./app`...");
   });
 
