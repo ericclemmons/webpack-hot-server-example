@@ -1,5 +1,5 @@
 var NpmInstallPlugin = require("npm-install-webpack-plugin");
-var StartServerPlugin = require("start-server-webpack-plugin").default;
+var StartServerPlugin = require("start-server-webpack-plugin");
 var webpack = require("webpack");
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        loader: "babel",
+        loader: "babel-loader",
         query: { cacheDirectory: true },
         test: /\.js$/,
       },
@@ -44,7 +44,7 @@ module.exports = {
     new StartServerPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 
   target: "async-node",
